@@ -1,12 +1,12 @@
 import 'package:demo/utils/global_colors.dart';
 import 'package:flutter/material.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
-// import 'package:get/get.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
 import 'package:demo/provider/user_provider.dart';
-// import 'package:demo/screen/splash_screen.dart';
-// import 'package:demo/services/auth_services.dart';
+import 'package:demo/screen/splash_screen.dart';
+import 'package:demo/services/auth_services.dart';
 import 'package:demo/screen/home_screen.dart';
 // import 'package:demo/screen/login_screen.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Node Auth',
       theme: ThemeData(
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
         ),
-        body: const HomeScreen(),
+        body: const SplashScreen(),
       ),
     );
   }
